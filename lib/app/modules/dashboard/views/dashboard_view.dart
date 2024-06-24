@@ -12,52 +12,48 @@ import '../controllers/dashboard_controller.dart';
 
 class DashboardView extends GetView<DashboardController> {
   const DashboardView({super.key});
+
   @override
   Widget build(BuildContext context) {
-    List<PersistentTabConfig> _tabs() => [
-      PersistentTabConfig(
-        screen: const HomeView(),
-        item: ItemConfig(
-          icon:  Image.asset("assets/icons/icon.png"),
-            title: "Home"
-        ),
-      ),
-      PersistentTabConfig(
-        screen: const ActivityView(),
-        item: ItemConfig(
-          icon:  Image.asset("assets/icons/icon.png"),
-          title: "Activity"
-        ),
-      ),
-      PersistentTabConfig(
-        screen: const PaymentView(),
-        item: ItemConfig(
-          icon: Image.asset("assets/icons/icon.png"),
-          title: "Payment"
-        ),
-      ),
-      PersistentTabConfig(
-        screen: const MessageView(),
-        item: ItemConfig(
-          icon: Image.asset("assets/icons/icon.png"),
-          title: "Message"
-        ),
-      ),
-      PersistentTabConfig(
-        screen: const AccountView(),
-        item: ItemConfig(
-          icon: Image.asset("assets/icons/icon.png"),
-          title: "Account"
-        ),
-      ),
-    ];
+    List<PersistentTabConfig> tabs() => [
+          PersistentTabConfig(
+            screen: const HomeView(),
+            item: ItemConfig(
+                icon: Image.asset("assets/icons/icon.png"),
+                title: "Home",
+                inactiveBackgroundColor: Colors.black),
+          ),
+          PersistentTabConfig(
+            screen: const ActivityView(),
+            item: ItemConfig(
+              icon: Image.asset("assets/icons/icon.png"),
+              title: "Activity",
+            ),
+          ),
+          PersistentTabConfig(
+            screen: const PaymentView(),
+            item: ItemConfig(
+                icon: Image.asset("assets/icons/icon.png"), title: "Payment"),
+          ),
+          PersistentTabConfig(
+            screen: const MessageView(),
+            item: ItemConfig(
+                icon: Image.asset("assets/icons/icon.png"), title: "Message"),
+          ),
+          PersistentTabConfig(
+            screen: const AccountView(),
+            item: ItemConfig(
+                icon: Image.asset("assets/icons/icon.png"), title: "Account"),
+          ),
+        ];
     return PersistentTabView(
-      tabs: _tabs(),
-      navBarHeight: 80,
+      tabs: tabs(),
+      navBarHeight: 90,
+      backgroundColor: Colors.white,
       resizeToAvoidBottomInset: true,
-      navBarBuilder: (navBarConfig) => Style3BottomNavBar(
+      navBarBuilder: (navBarConfig) => Style12BottomNavBar(
         navBarConfig: navBarConfig,
-
+        navBarDecoration: const NavBarDecoration(),
       ),
     );
   }
