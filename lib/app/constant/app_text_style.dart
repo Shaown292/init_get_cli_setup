@@ -6,6 +6,14 @@ class AppTextStyle{
     textStyle: const TextStyle(
         color: Color(0xFF5D5D5D), fontSize: 13, fontWeight: FontWeight.w400),
   );
+  static TextStyle ptSansGreyF11W400 = GoogleFonts.ptSans(
+    textStyle: const TextStyle(
+        color: Color(0xFF5D5D5D), fontSize: 11, fontWeight: FontWeight.w400),
+  );
+  static TextStyle ptSansNBlueF16W700 = GoogleFonts.ptSans(
+    textStyle: const TextStyle(
+        color: Color(0xFF061237), fontSize: 16, fontWeight: FontWeight.w700),
+  );
   static TextStyle ptSansNavyBlueF20W700 = GoogleFonts.ptSans(
     textStyle: const TextStyle(
         color: Color(0xFF061237), fontSize: 20, fontWeight: FontWeight.w700),
@@ -17,6 +25,18 @@ class AppTextStyle{
   static TextStyle ptSansGreyF11W700 = GoogleFonts.ptSans(
     textStyle: const TextStyle(
         color: Color(0xFF5D5D5D), fontSize: 11, fontWeight: FontWeight.w700),
+  );
+  static TextStyle ptSansGreyF13W700 = GoogleFonts.ptSans(
+    textStyle: const TextStyle(
+        color: Color(0xFF5D5D5D), fontSize: 13, fontWeight: FontWeight.w700),
+  );
+  static TextStyle ptSansLBlackF11W700 = GoogleFonts.ptSans(
+    textStyle: const TextStyle(
+        color: Color(0xFF131313), fontSize: 11, fontWeight: FontWeight.w700),
+  );
+  static TextStyle ptSansLBlackF13W700 = GoogleFonts.ptSans(
+    textStyle: const TextStyle(
+        color: Color(0xFF131313), fontSize: 13, fontWeight: FontWeight.w700),
   );
   static TextStyle ptSansWhiteF11W700 = GoogleFonts.ptSans(
     textStyle: const TextStyle(
